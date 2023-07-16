@@ -52,14 +52,13 @@ btn.addEventListener("submit", function (e) {
 
 // Show score
 function showScore() {
-	console.log("showScore called");
 	calculateScore();
 	showHide();
+	console.log("showScore called");
 }
 
 // Calculate score
 function calculateScore() {
-	console.log("calculateScore called");
 	let reading = parseFloat(r.value);
 	let writing = parseFloat(w.value);
 	let speaking = parseFloat(s.value);
@@ -91,6 +90,7 @@ function calculateScore() {
 	document.querySelector(".speaking_score").innerHTML = speaking.toFixed(2);
 	document.querySelector(".listening_score").innerHTML = listening.toFixed(2);
 
+	console.log("calculateScore called");
 	console.log("Calculation is done");
 	console.log(totalScore);
 	console.log(reading);
@@ -101,9 +101,9 @@ function calculateScore() {
 
 // Toggle show or Hide class on calculator & result summary card
 function showHide() {
-	console.log("showHide called");
 	f.classList.toggle("show");
 	f.classList.toggle("hide");
 	z.classList.toggle("show");
 	z.classList.toggle("hide");
+	console.log("showHide called");
 }
