@@ -6,7 +6,7 @@ const l = document.getElementById("listening");
 const btn = document.querySelector("button");
 const z = document.getElementById("result-summary");
 
-//show input error message
+// Show input error message
 function showError(input, message) {
 	const formControl = input.parentElement;
 	formControl.className = "form-control error";
@@ -14,13 +14,13 @@ function showError(input, message) {
 	small.innerText = message;
 }
 
-//show success color
+// Show success color
 function showSuccess(input) {
 	const formControl = input.parentElement;
 	formControl.className = "form-control success";
 }
 
-//check required fields
+// Check required fields
 function checkRequiredFields(inputArr) {
 	let isValid = true;
 	inputArr.forEach(function (input) {
@@ -37,27 +37,27 @@ function checkRequiredFields(inputArr) {
 	return isValid;
 }
 
-// get fieldName
+// Get fieldName
 function getFieldName(input) {
 	return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
-// event listener
-btn.addEventListener("click", function (e) {
+// Event listener
+btn.addEventListener("submit", function (e) {
 	e.preventDefault();
 	if (checkRequiredFields([r, w, s, l])) {
 		showScore();
 	}
 });
 
-// show score
+// Show score
 function showScore() {
 	console.log("showScore called");
 	calculateScore();
 	showHide();
 }
 
-// calculate score
+// Calculate score
 function calculateScore() {
 	console.log("calculateScore called");
 	let reading = parseFloat(r.value);
