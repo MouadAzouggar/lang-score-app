@@ -50,7 +50,7 @@
 	--fs-500: 1.25rem;
 	--fs-600: 1.5rem;
 	--fs-700: 1.75rem;
-	--fs-800: 2rem;
+	--fs-800: 3rem;
 	--fs-900: 5rem;
 	--success-color: #2ecc71;
 	--error-color: #e74c3c;
@@ -232,7 +232,7 @@ form,
 
 .result-score span {
 	display: block;
-	font-size: var(--fs-900);
+	font-size: var(--fs-800);
 	font-weight: var(--fw-black);
 	line-height: 1;
 	color: var(--clr-neutral-100);

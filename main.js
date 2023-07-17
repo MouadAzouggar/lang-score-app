@@ -3,7 +3,7 @@ const r = document.getElementById("reading");
 const w = document.getElementById("writing");
 const s = document.getElementById("speaking");
 const l = document.getElementById("listening");
-const btn = document.querySelector("button");
+const btn = document.querySelector("button.calculation");
 const z = document.getElementById("result-summary");
 
 // Show input error message
@@ -43,7 +43,7 @@ function getFieldName(input) {
 }
 
 // Event listener
-btn.addEventListener("submit", function (e) {
+btn.addEventListener("click", function (e) {
 	e.preventDefault();
 	if (checkRequiredFields([r, w, s, l])) {
 		showScore();
@@ -54,7 +54,6 @@ btn.addEventListener("submit", function (e) {
 function showScore() {
 	calculateScore();
 	showHide();
-	console.log("showScore called");
 }
 
 // Calculate score
@@ -90,7 +89,6 @@ function calculateScore() {
 	document.querySelector(".speaking_score").innerHTML = speaking.toFixed(2);
 	document.querySelector(".listening_score").innerHTML = listening.toFixed(2);
 
-	console.log("calculateScore called");
 	console.log("Calculation is done");
 	console.log(totalScore);
 	console.log(reading);
@@ -105,5 +103,4 @@ function showHide() {
 	f.classList.toggle("hide");
 	z.classList.toggle("show");
 	z.classList.toggle("hide");
-	console.log("showHide called");
 }
